@@ -2,8 +2,8 @@
 #import "RNVibration.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import <AudioToolbox/AudioServices.h>
-void AudioServicesStopSystemSound(SystemSoundID inSystemSoundID);
-void AudioServicesPlaySystemSoundWithVibration(SystemSoundID inSystemSoundID,id arg,NSDictionary* vibratePattern);
+// void AudioServicesStopSystemSound(SystemSoundID inSystemSoundID);
+// void AudioServicesPlaySystemSoundWithVibration(SystemSoundID inSystemSoundID,id arg,NSDictionary* vibratePattern);
 
 @implementation RNVibration
 
@@ -22,7 +22,7 @@ RCT_EXPORT_METHOD(vibrate:(NSUInteger *)vibrationMS)
     [dict setObject:[NSNumber numberWithInt:1] forKey:@"Intensity"];
     
     
-    AudioServicesPlaySystemSoundWithVibration(4095,nil,dict);
+//     AudioServicesPlaySystemSoundWithVibration(4095,nil,dict);
     
 }
 
@@ -47,7 +47,7 @@ RCT_EXPORT_METHOD(iOSvibrate:(NSUInteger *)vibrationStyle)
     NSUInteger failed = (1107);
     
     
-    AudioServicesPlaySystemSound(vibrationStyle);
+//     AudioServicesPlaySystemSound(vibrationStyle);
 
     
     
